@@ -3,55 +3,49 @@
 // const numberFirst = +prompt("Enter number first");
 // const numberSecond = +prompt("Enter number second");
 
-// switch (true) {
-//     case numberFirst > numberSecond:
-//         alert(`${numberFirst} більше ніж ${numberSecond}`);
-//         break;
-//     case numberSecond > numberFirst:
-//         alert(`${numberSecond} більше ніж ${numberFirst}`);
-//         break;
-//     default:
-//         alert(`Числа ${numberFirst} та ${numberSecond} однакові`)
+// if (numberFirst > numberSecond) {
+//   alert(`${numberFirst} більше ніж ${numberSecond}`);
+// } else if (numberSecond > numberFirst) {
+//   alert(`${numberSecond} більше ніж ${numberFirst}`);
+// } else {
+//   alert(`Числа ${numberFirst} та ${numberSecond} однакові`);
 // }
 
 // 2. Відомо дві дистанції. Одне в кілометрах, інше в футах(1 фут - 0,305м). Яка дистанція менша?
 
 // const distanceKilometers = +prompt("Distance in kilometers");
 // const distanceFeet = +prompt("Distance in feet");
+// const kilometersEnvelope = distanceKilometers * 1000;
+// const envelopeFeet = distanceFeet / 3.281;
 
-// if ((distanceKilometers * 1000) < (distanceFeet / 3.281)) {
-//     alert(`${distanceKilometers} кілометр менша ніж ${distanceFeet} фут`)
-// } else if ((distanceFeet / 3.281) < (distanceKilometers * 1000)) {
-//     alert(`${distanceFeet} фут менша ніж ${distanceKilometers} кілометр`)
+// if (kilometersEnvelope < envelopeFeet) {
+//   alert(`${distanceKilometers} кілометр менша ніж ${distanceFeet} фут`);
+// } else if (envelopeFeet < kilometersEnvelope) {
+//   alert(`${distanceFeet} фут менша ніж ${distanceKilometers} кілометр`);
 // } else {
-//     alert("Дистанції однакові")
+//   alert("Дистанції однакові");
 // }
 
 // 3. Виявити чи деяке число а є дільником числа b ? І навпаки. (Дати 2 відповіді)
 
-// const firstNum = +prompt("Вказати переше число")
-// const secondNum = +prompt("Вказати друге число")
+// const firstNum = +prompt("Вказати переше число");
+// const secondNum = +prompt("Вказати друге число");
 
-// switch (firstNum % secondNum) {
-//     case 0:
-//         alert(`${secondNum} є дільником ${firstNum}`);
-//         break;
-//     case 0:
-//         alert(`${firstNum} є дільником ${secondNum}`);
-//         break
-//     default:
-//         alert(`Жодне з чисел не є дільником`)
+// if (firstNum % secondNum === 0) {
+//   alert(`${secondNum} є дільником ${firstNum}`);
+// } else if (secondNum % firstNum === 0) {
+//   alert(`${firstNum} є дільником ${secondNum}`);
+// } else {
+//   alert(`Жодне з чисел не є дільником`);
 // }
-
-
 
 // 4. Вивести на сторінку в одну строку через зап’яту числа від 10 до 20
 
-// for (let i = 10; i <= 20; i++) {
-//     let sign = ",";
-//     if (i == 20) sign = ";"
-//      document.write(i + sign)
-// }
+for (let i = 10; i <= 20; i++) {
+  let sign = ",";
+  if (i === 20) sign = ";";
+  document.write(i + sign);
+}
 
 // 5. Вивести квадрати чисел від 10 до 20
 
