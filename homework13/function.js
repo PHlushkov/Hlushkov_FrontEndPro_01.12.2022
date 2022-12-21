@@ -8,7 +8,7 @@ function showList() {
 
 let prodNum;
 
-let showProduct = function () {
+const showProduct = function () {
   do {
     prodNum = prompt("Write product number:");
 
@@ -21,7 +21,7 @@ let showProduct = function () {
 
 let prodCount;
 
-let showPrice = function () {
+const showPrice = function () {
   do {
     prodCount = prompt("Write product count:");
 
@@ -32,11 +32,9 @@ let showPrice = function () {
   } while (prodCount <= 0 || isNaN(prodCount));
 };
 
-let showSell = function () {
-  if (totalProdPrice * GRN_PER_DOLLAR > DISCOUNT_START_FROM) {
+function sumSell(a, b, c) {
+  if (a * b > c) {
     console.log(`Congrats, you get a discount ${DISCOUNT}%`);
-    console.log(
-      `Your total price is: ${(totalProdPrice * (100 - DISCOUNT)) / 100}`
-    );
+    console.log(`Your total price is: ${(a * (100 - DISCOUNT)) / 100}`);
   }
-};
+}

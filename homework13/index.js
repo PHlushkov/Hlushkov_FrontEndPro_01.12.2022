@@ -27,11 +27,6 @@ if (typeof prodNum === "number") {
 
     console.log(`Total price: $${totalProdPrice}`);
 
-    if (totalProdPrice * GRN_PER_DOLLAR > DISCOUNT_START_FROM) {
-      console.log(`Congrats, you get a discount ${DISCOUNT}%`);
-      console.log(
-        `Your total price is: ${(totalProdPrice * (100 - DISCOUNT)) / 100}`
-      );
-    }
+    sumSell(totalProdPrice, GRN_PER_DOLLAR, DISCOUNT_START_FROM);
   }
 }
