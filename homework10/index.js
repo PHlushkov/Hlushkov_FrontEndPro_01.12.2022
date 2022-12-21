@@ -8,8 +8,9 @@ for (let i = 0; i < enterNumber; i++) {
 }
 console.log(arr);
 
-arr.sort();
-console.log(arr);
+arr.sort(function (a, b) {
+  return a - b;
+});
 
 arr.splice(1, 3);
 console.log(arr);
