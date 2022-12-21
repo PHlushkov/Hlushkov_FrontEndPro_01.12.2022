@@ -9,7 +9,7 @@
 // const convert = 27;
 
 // for (let i = 10; i <= 100; i += 10) {
-//   let result = i * convert;
+//   const result = i * convert;
 //   document.write(`${result}; `);
 // }
 
@@ -18,15 +18,15 @@
 // const enterNumb = +prompt("Вкажіть число");
 
 // for (let i = 1; i <= 100; i++) {
-//   let result = i ** 2;
+//   const result = i ** 2;
 //   if (result < enterNumb) {
 //     document.write(`${result}; `);
 //   }
 // }
 
-// Дане ціле число. З'ясувати, чи є воно простим (простим називається число, більше 1, які не мають інших дільників крім 1 і себе).
+// // Дане ціле число. З'ясувати, чи є воно простим (простим називається число, більше 1, які не мають інших дільників крім 1 і себе).
 
-// let userNum = +prompt("Вказати число");
+// const userNum = +prompt("Вказати число");
 
 // for (let i = 2; i < userNum; i++) {
 //   if (userNum % i == 0) {
@@ -39,7 +39,7 @@
 
 // Дане деяке число. Визначити, чи можна одержати це число шляхом зведення числа 3 у деякий ступінь. (Наприклад, числа 9, 81 можна отримати, а 13 - не можна).
 
-// let enterNumb = +prompt("Вкажіть число");
+// const enterNumb = +prompt("Вкажіть число");
 // const num = 3;
 
 // for (let i = 1; i < enterNumb; i++) {
