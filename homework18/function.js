@@ -1,3 +1,5 @@
+"use strict";
+
 const showDiv = () => {
   const creationDiv = document.createElement("div");
   creationDiv.className = "div-message";
