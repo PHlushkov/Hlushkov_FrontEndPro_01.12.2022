@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+}
+
+.category {
+    flex-grow: 1;
+    border: 1px solid;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.details {
+    max-width: 800px;
+}
