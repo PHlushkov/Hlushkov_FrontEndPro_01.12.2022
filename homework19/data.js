@@ -6,7 +6,7 @@ const DATA = [
     products: [
       {
         name: "Samsung",
-        price: "10000$$",
+        price: "10000$",
         description:
           "Підтримка інтелектуального пульта HbbTV Smart TV Інтернет-браузер Автоматичний пошук каналів Електронний телегід ConnectShare",
       },

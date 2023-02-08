@@ -62,10 +62,15 @@ const showDetails = (Event) => {
   priceElem.appendChild(priceElement);
   btnElem.appendChild(btnElement);
 
-  btnElement.onclick = () => {
-    const prt = alert("Товар Куплено");
-    document.location.reload();
-  };
+  btnElement.addEventListener(
+    "click",
+    () => {
+      formElem();
+    },
+    { once: true }
+  );
 };
+
+const dataElem = document.querySelector(".data");
 
 showCategories();
