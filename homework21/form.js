@@ -4,6 +4,7 @@ const form = document.querySelector(".form");
 
 const nameUserElem = () => {
   const userName = document.createElement("input");
+
   userName.name = "ПІБ: ";
   userName.type = "text";
   userName.placeholder = "ПІБ";
@@ -20,7 +21,6 @@ const cityElem = () => {
   const cityKherson = document.createElement("option");
 
   citySelect.name = "Місто в якому знаходитесь: ";
-
   cityDnipro.innerHTML = "Дніпро";
   cityKyiv.innerHTML = "Київ";
   cityKharkiv.innerHTML = "Харків";
@@ -96,24 +96,27 @@ const btnElem = () => {
 
   buttonElem.type = "submit";
   buttonElem.value = "Замовити";
-  const formData = new FormData(form);
 
   form.appendChild(buttonElem);
 };
 
 const bodyElem = document.querySelector(".body");
+const listOrders = [];
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
+  const date = new Date().toLocaleDateString();
   const formData = new FormData(form);
 
-  formData.forEach((name, value) => {
+  formData.forEach((value, name) => {
     const formDataElem = document.createElement("p");
-    formDataElem.innerHTML = value + `<strong>${name}</strong>`;
+    formDataElem.innerHTML = name + `<strong>${value}</strong>`;
     bodyElem.appendChild(formDataElem);
     form.style.display = "none";
   });
+  listOrders.push(date);
+  localStorage.setItem("date", listOrders);
 });
 
 const formElem = (user, city, post, payment, amount, comment, btn) => {
