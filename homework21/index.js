@@ -14,8 +14,8 @@ const showCategories = () => {
   });
 };
 
-const showProducrs = (Event) => {
-  const categoryId = Event.target.getAttribute("data-category-id");
+const showProducrs = ({ target }) => {
+  const categoryId = target.getAttribute("data-category-id");
   const products = DATA[categoryId].products;
   const productsElem = document.querySelector(".product");
 
@@ -34,9 +34,9 @@ const showProducrs = (Event) => {
   });
 };
 
-const showDetails = (Event) => {
-  const categoryId = Event.target.getAttribute("data-category-id");
-  const productId = Event.target.getAttribute("data-product-id");
+const showDetails = ({ target }) => {
+  const categoryId = target.getAttribute("data-category-id");
+  const productId = target.getAttribute("data-product-id");
   const details = DATA[categoryId].products[productId].description;
   const price = DATA[categoryId].products[productId].price;
   const detailsElem = document.querySelector(".details");

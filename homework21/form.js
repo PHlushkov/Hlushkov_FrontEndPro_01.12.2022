@@ -101,22 +101,19 @@ const btnElem = () => {
 };
 
 const bodyElem = document.querySelector(".body");
-const listOrders = [];
+const listOrders = JSON.parse(localStorage.getItem("date")) || [];
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-
-  const date = new Date().toLocaleDateString();
+form.addEventListener("submit", () => {
+  const detailsUserOrders = [];
+  const date = new Date().toLocaleString();
   const formData = new FormData(form);
 
   formData.forEach((value, name) => {
-    const formDataElem = document.createElement("p");
-    formDataElem.innerHTML = name + `<strong>${value}</strong>`;
-    bodyElem.appendChild(formDataElem);
-    form.style.display = "none";
+    detailsUserOrders.push(name + value);
   });
-  listOrders.push(date);
-  localStorage.setItem("date", listOrders);
+
+  listOrders.push({ date: date, info: detailsUserOrders });
+  localStorage.setItem("date", JSON.stringify(listOrders));
 });
 
 const formElem = (user, city, post, payment, amount, comment, btn) => {
