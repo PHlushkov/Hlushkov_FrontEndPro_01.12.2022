@@ -9,7 +9,7 @@
 }
 
 .main{
-  min-width: 500px;
+  width: 500px;
   text-align: center;
   border: solid 1px blue;
   background-color: aqua;
