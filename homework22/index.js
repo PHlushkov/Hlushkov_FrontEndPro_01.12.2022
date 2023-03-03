@@ -1,9 +1,13 @@
 "use strict";
 
-const tsetInfo = addUserElem.addEventListener("click", () => {
-  infoUserElem.style.display = "none";
-  showForm();
-});
+addUserElem.addEventListener(
+  "click",
+  () => {
+    infoUserElem.style.display = "none";
+    showForm();
+  },
+  { once: true }
+);
 
 for (const key in localStorage) {
   if (Object.hasOwnProperty.call(localStorage, key)) {
@@ -60,6 +64,7 @@ for (const key in localStorage) {
       null,
       {
         click: () => {
+          addUserElem.style.display = "none";
           const idUser = userInfo.getAttribute("id");
           infoUserElem.style.display = "none";
           showForm(idUser);
