@@ -1,28 +1,12 @@
 "use strict";
+const humbrger = new Hamburger(SIZE_SMALL);
 
-const postNumberElem = document.querySelector(".post-number");
-const searchBtnElem = document.querySelector(".search-btn");
-const blockInfoElem = document.querySelector(".block-info");
-const blockComment = document.querySelector(".block-comment");
+humbrger.addStuffing(STUFFING_CHEESE);
+humbrger.addAdditives(ADDITIVE_MAYONNAISE);
 
-searchBtnElem.addEventListener("click", (e) => {
-  e.preventDefault();
-  const valueElem = postNumberElem.value;
-  if (valueElem <= 0 || valueElem >= 101) {
-    postNumberElem.style.backgroundColor = "red";
-    blockComment.innerHTML = "";
-    blockInfoElem.innerHTML = "";
-    createElem(
-      "p",
-      { className: "error-mesadge", style: "color: red;" },
-      null,
-      "Вкажи число від 1 до 100",
-      blockInfoElem
-    );
-  } else {
-    blockComment.innerHTML = "";
-    blockInfoElem.innerHTML = "";
-    postNumberElem.style.backgroundColor = "green";
-    showPost(valueElem);
-  }
-});
+console.log(`Calories: ${humbrger.getCalcCalories()}`);
+console.log(`Price: ${humbrger.getCalcPrice()}`);
+
+humbrger.addAdditives(ADDITIVES_SEASONING);
+
+console.log(`Price with sauce: ${humbrger.getCalcPrice()}`);
