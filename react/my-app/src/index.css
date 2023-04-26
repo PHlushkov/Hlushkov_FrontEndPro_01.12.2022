@@ -5,51 +5,21 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #222222;
 
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-.wrapper{
-  display: grid;
-  grid-template-columns: 1fr 7fr
-}
-
-.header{
-  display: flex;
-  justify-content: center;
-  grid-column-start: 1;
-  grid-column-end: 3;
-  color: #61dafb
-
-}
-
-.navigation{
-  display: flex;
-  justify-content: start;
-}
-
-.container{
+.container {
   display: flex;
   justify-content: center;
 }
 
-.list{
-  list-style: none;
+.buttons{
+  max-width: 178px;
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  flex-wrap: wrap;
 }
 
-.link{
-  text-decoration: none;
-  color: #61dafb;
-}
-
-.img{
-  width: 400px;
+.button{
+  width: 59px;
+  height: 44px;
 }
