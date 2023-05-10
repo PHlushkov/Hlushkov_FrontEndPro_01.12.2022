@@ -1,0 +1,23 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn-form {
+    padding-top: 5px;
+    display: flex;
+    justify-content: center;
+    gap: 5px
+}
+
+.input-form{
+    border-radius: 5px;
+}
+
+.setting-btn{
+    border-radius: 5px;
+    padding: 5px;
+    width: 87px;
+}

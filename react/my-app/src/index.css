@@ -5,21 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
 }
 
-.container {
-  display: flex;
-  justify-content: center;
-}
-
-.buttons{
-  max-width: 178px;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.button{
-  width: 59px;
-  height: 44px;
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }

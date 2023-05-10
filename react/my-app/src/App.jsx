@@ -1,10 +1,11 @@
 import React from "react";
-import Calculator from "./components/Calculator";
+import Contacts from "./components/Contacts";
+
 
 function App() {
   return (
-    <div className="container">
-      <Calculator />
+    <div className="App">
+      <Contacts/>
     </div>
   );
 }
